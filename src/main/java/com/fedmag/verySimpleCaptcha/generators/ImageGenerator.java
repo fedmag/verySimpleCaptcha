@@ -1,11 +1,11 @@
-package com.fedmag.generators;
+package com.fedmag.verySimpleCaptcha.generators;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.BufferedImageOp;
 import java.awt.image.ConvolveOp;
 import java.awt.image.Kernel;
-import java.util.Locale;
+import java.util.Arrays;
 
 public class ImageGenerator {
 
@@ -19,14 +19,15 @@ public class ImageGenerator {
         GraphicsEnvironment ge = GraphicsEnvironment
                 .getLocalGraphicsEnvironment();
 
-        bufferedImage = addBlur(bufferedImage);
-        return bufferedImage;
+        return addBlur(bufferedImage, 7); // TODO do we want this to be customizable???
     }
 
-    private static BufferedImage addBlur(BufferedImage bufferedImage) {
-        Kernel kernel = new Kernel(3, 3, new float[] { 1f / 9f, 1f / 9f, 1f / 9f,
-                1f / 9f, 1f / 9f, 1f / 9f, 1f / 9f, 1f / 9f, 1f / 9f });
-        BufferedImageOp op = new ConvolveOp(kernel);
-        return op.filter(bufferedImage, null);
+    private static BufferedImage addBlur(BufferedImage image, int matrixSize) {
+        int numberOfCells = matrixSize * matrixSize;
+        float[] matrix = new float[numberOfCells];
+
+        Arrays.fill(matrix, 1.0f / (float) numberOfCells);
+        BufferedImageOp op = new ConvolveOp( new Kernel(matrixSize, matrixSize, matrix), ConvolveOp.EDGE_NO_OP, null );
+        return op.filter(image, new BufferedImage(image.getWidth(), image.getHeight(), image.getType()));
     }
 }

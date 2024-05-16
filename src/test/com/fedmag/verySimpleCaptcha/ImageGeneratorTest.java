@@ -1,4 +1,4 @@
-package com.fedmag;
+package com.fedmag.verySimpleCaptcha;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

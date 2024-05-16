@@ -1,4 +1,4 @@
-package com.fedmag;
+package com.fedmag.verySimpleCaptcha;
 
 import javax.imageio.ImageIO;
 import java.io.ByteArrayOutputStream;
@@ -22,6 +22,6 @@ public class Main {
             throw new RuntimeException(e);
         }
         String encodedString = Base64.getEncoder().encodeToString(baos.toByteArray());
-        System.out.println(encodedString);
+        System.out.println("Encoded string: " + encodedString);
     }
 }

@@ -1,4 +1,4 @@
-package com.fedmag.generators;
+package com.fedmag.verySimpleCaptcha.generators;
 
 import java.util.Random;
 

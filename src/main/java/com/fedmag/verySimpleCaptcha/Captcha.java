@@ -1,11 +1,10 @@
-package com.fedmag;
+package com.fedmag.verySimpleCaptcha;
 
-import com.fedmag.generators.ImageGenerator;
-import com.fedmag.generators.RandomStringGenerator;
+import com.fedmag.verySimpleCaptcha.generators.ImageGenerator;
+import com.fedmag.verySimpleCaptcha.generators.RandomStringGenerator;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Captcha {
 
