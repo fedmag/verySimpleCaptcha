@@ -1,6 +1,9 @@
 package com.fedmag.verySimpleCaptcha;
 
+import com.fedmag.verySimpleCaptcha.generators.ImageGenerator;
+
 import javax.imageio.ImageIO;
+import java.awt.*;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;

@@ -2,6 +2,7 @@ package com.fedmag.verySimpleCaptcha;
 
 import com.fedmag.verySimpleCaptcha.generators.ImageGenerator;
 import com.fedmag.verySimpleCaptcha.generators.RandomStringGenerator;
+import com.fedmag.verySimpleCaptcha.generators.filters.ImageFilter;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public class Captcha {
     }
 
     private Captcha(Builder builder) {
-        this.trueValue = builder.charsToUse == null? RandomStringGenerator.generate(builder.numbOfChars) : RandomStringGenerator.generate(builder.numbOfChars, builder.charsToUse);
+        this.trueValue = builder.charsToUse == null ? RandomStringGenerator.generate(builder.numbOfChars) : RandomStringGenerator.generate(builder.numbOfChars, builder.charsToUse);
         this.image = ImageGenerator.fromString(this.trueValue, builder.imageWidth, builder.imageHeight);
     }
 
@@ -30,13 +31,11 @@ public class Captcha {
         private int imageWidth = 200;
         private int imageHeight = 100;
         private String charsToUse;
-
         ArrayList<Character> availableChars = new ArrayList<>();
+        ArrayList<ImageFilter> filters = new ArrayList<>();
 
         public Captcha build() {
             assert !availableChars.isEmpty();
-            // generate random string
-            // generate image
             return new Captcha(this);
         }
 
@@ -68,6 +67,11 @@ public class Captcha {
             charsToUse = "0123456789";
             return this;
         }
+
+        public Builder addFilter(ImageFilter filter) {
+            this.filters.add(filter);
+            return this;
+        }
     }
 
     /**
@@ -84,16 +88,17 @@ public class Captcha {
      *     Domain: The domain name to which the request is made. Verify in your case if the domain name is same for two instances
      *     Path: If the path name is same. Web Server send the context root as the path , requests under same context root share cookies.
      *     Secure: Server sends if the given cookie is secure or not. Meaning, if the cookie can be sent on non-secure channel.
+
+    public String generateCaptchaImage(String token) {
+        BufferedImage image = cage.drawImage(token);
+        try (ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
+            ImageIO.write(image, "png", baos);
+            byte[] imageBytes = baos.toByteArray();
+            return Base64.getEncoder().encodeToString(imageBytes);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to generate captcha image", e);
+        }
+    }
      */
-//    public String generateCaptchaImage(String token) {
-//        BufferedImage image = cage.drawImage(token);
-//        try (ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
-//            ImageIO.write(image, "png", baos);
-//            byte[] imageBytes = baos.toByteArray();
-//            return Base64.getEncoder().encodeToString(imageBytes);
-//        } catch (Exception e) {
-//            throw new RuntimeException("Failed to generate captcha image", e);
-//        }
-//    }
 
 }

@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df2754be-e1ca-48fe-af58-27ff53d28cc3" name="Changes" comment="first commit, MVP done.">
-      <change afterPath="$PROJECT_DIR$/src/main/com/fedmag/verySimpleCaptcha/generators/filters/GaussianFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/fedmag/verySimpleCaptcha/generators/filters/ImageFilter.java" afterDir="false" />
+    <list default="true" id="df2754be-e1ca-48fe-af58-27ff53d28cc3" name="Changes" comment="moves files">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/filters/GaussianFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/filters/ImageFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/filters/SimpleGaussianFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/fedmag/Captcha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/fedmag/verySimpleCaptcha/Captcha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/fedmag/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/fedmag/verySimpleCaptcha/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/fedmag/generators/ImageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/fedmag/verySimpleCaptcha/generators/ImageGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/fedmag/generators/RandomStringGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/fedmag/verySimpleCaptcha/generators/RandomStringGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/com/fedmag/ImageGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/fedmag/verySimpleCaptcha/ImageGeneratorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/Captcha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/Captcha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/ImageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/ImageGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -49,12 +48,15 @@
   <component name="ProjectId" id="2gYeZWwqgUEfypj3EQv1IoT4TeU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Application.com.fedmag.verySimpleCaptcha.Main.executor": "Run",
     "JUnit.ImageGeneratorTest.executor": "Run",
     "JUnit.ImageGeneratorTest.successTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -62,6 +64,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/maggi/Desktop/fedmag/verySimpleCaptcha/src/main/java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.26990446"
@@ -75,9 +78,9 @@
       <recent name="com.fedmag" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.fedmag.Main" />
+  <component name="RunManager" selected="Application.com.fedmag.verySimpleCaptcha.Main">
+    <configuration name="com.fedmag.verySimpleCaptcha.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.fedmag.verySimpleCaptcha.Main" />
       <module name="verySimpleCaptcha" />
       <extension name="coverage">
         <pattern>
@@ -120,9 +123,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.com.fedmag.verySimpleCaptcha.Main" />
+      <item itemvalue="JUnit.ImageGeneratorTest" />
+      <item itemvalue="JUnit.ImageGeneratorTest.successTest" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.com.fedmag.verySimpleCaptcha.Main" />
         <item itemvalue="JUnit.ImageGeneratorTest.successTest" />
         <item itemvalue="JUnit.ImageGeneratorTest" />
       </list>
@@ -145,23 +153,52 @@
       <option name="project" value="LOCAL" />
       <updated>1715881330172</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="moves files, improves blurring">
+      <option name="closed" value="true" />
+      <created>1715897001652</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715897001652</updated>
+    </task>
+    <task id="LOCAL-00003" summary="moves files">
+      <option name="closed" value="true" />
+      <created>1715897010964</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715897010964</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit, MVP done." />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit, MVP done." />
+    <MESSAGE value="moves files, improves blurring" />
+    <MESSAGE value="moves files" />
+    <option name="LAST_COMMIT_MESSAGE" value="moves files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/com/fedmag/verySimpleCaptcha/Main.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/Main.java</url>
           <line>20</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/com/fedmag/verySimpleCaptcha/Main.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/Main.java</url>
           <line>16</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>

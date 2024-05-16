@@ -1,33 +1,42 @@
 package com.fedmag.verySimpleCaptcha.generators;
 
+import com.fedmag.verySimpleCaptcha.generators.filters.ImageFilter;
+import com.fedmag.verySimpleCaptcha.generators.filters.SimpleGaussianFilter;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.awt.image.BufferedImageOp;
-import java.awt.image.ConvolveOp;
-import java.awt.image.Kernel;
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public class ImageGenerator {
 
+    private static Font font = new Font("Verdana", Font.BOLD, 28);
+    private static final ArrayList<ImageFilter> filters = new ArrayList<>();
+
+    static {
+        filters.add(new SimpleGaussianFilter());
+    }
+
+    public static void setFont(Font font) {
+        ImageGenerator.font = font;
+    }
+
+    public static void addFilter(ImageFilter filter) {
+        filters.add(filter);
+    }
+
+    // TODO here we might provide the filters as parameter from the captcha call. Do we actually want it tho?
+    //  we could also do like for the Font, provide a default list of filters, and allow the user to modify it
     public static BufferedImage fromString(String string, int width, int height) {
         BufferedImage bufferedImage = new BufferedImage(width, height, 1);
-        Font font = new Font("Verdana", Font.BOLD, 28);
         Graphics2D graphics = bufferedImage.createGraphics();
-        graphics.setFont(font);
+        graphics.setFont(ImageGenerator.font);
         graphics.drawString(string, 20, 100);
 
-        GraphicsEnvironment ge = GraphicsEnvironment
-                .getLocalGraphicsEnvironment();
+        for (ImageFilter filter : filters) {
+            bufferedImage = filter.apply(bufferedImage);
+        }
 
-        return addBlur(bufferedImage, 7); // TODO do we want this to be customizable???
+        return bufferedImage; // TODO do we want this to be customizable???
     }
 
-    private static BufferedImage addBlur(BufferedImage image, int matrixSize) {
-        int numberOfCells = matrixSize * matrixSize;
-        float[] matrix = new float[numberOfCells];
-
-        Arrays.fill(matrix, 1.0f / (float) numberOfCells);
-        BufferedImageOp op = new ConvolveOp( new Kernel(matrixSize, matrixSize, matrix), ConvolveOp.EDGE_NO_OP, null );
-        return op.filter(image, new BufferedImage(image.getWidth(), image.getHeight(), image.getType()));
-    }
 }
