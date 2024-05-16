@@ -4,20 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df2754be-e1ca-48fe-af58-27ff53d28cc3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/fedmag/Captcha.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/fedmag/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/fedmag/generators/ImageGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/fedmag/generators/RandomStringGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/com/fedmag/ImageGeneratorTest.java" afterDir="false" />
+    <list default="true" id="df2754be-e1ca-48fe-af58-27ff53d28cc3" name="Changes" comment="first commit, MVP done.">
+      <change afterPath="$PROJECT_DIR$/src/main/com/fedmag/verySimpleCaptcha/generators/filters/GaussianFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/fedmag/verySimpleCaptcha/generators/filters/ImageFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/fedmag/Captcha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/fedmag/verySimpleCaptcha/Captcha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/fedmag/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/fedmag/verySimpleCaptcha/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/fedmag/generators/ImageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/fedmag/verySimpleCaptcha/generators/ImageGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/fedmag/generators/RandomStringGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/fedmag/verySimpleCaptcha/generators/RandomStringGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/com/fedmag/ImageGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/fedmag/verySimpleCaptcha/ImageGeneratorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,15 +22,27 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "fedmag"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/fedmag/verySimpleCaptcha.git",
+    "accountId": "7e7c5623-c011-454f-8503-c3251ab13afe"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 7
 }]]></component>
@@ -130,15 +137,33 @@
       <option name="presentableId" value="Default" />
       <updated>1715796066335</updated>
     </task>
+    <task id="LOCAL-00001" summary="first commit, MVP done.">
+      <option name="closed" value="true" />
+      <created>1715881330172</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715881330172</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit, MVP done." />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit, MVP done." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/com/fedmag/Main.java</url>
+          <url>file://$PROJECT_DIR$/src/main/com/fedmag/verySimpleCaptcha/Main.java</url>
           <line>20</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/com/fedmag/verySimpleCaptcha/Main.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
