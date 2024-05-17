@@ -3,6 +3,7 @@ package com.fedmag.verySimpleCaptcha;
 import com.fedmag.verySimpleCaptcha.generators.filters.SimpleGaussianFilter;
 
 import javax.imageio.ImageIO;
+import java.awt.*;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
@@ -11,9 +12,10 @@ import java.util.Base64;
 public class Main {
     public static void main(String[] args) {
         Captcha captcha = new Captcha.Builder()
-                .width(200)
-                .height(200)
-                .numberOfChars(5)
+                .width(220)
+                .height(220)
+                .numberOfChars(8)
+                .startingPoint(new Point(10, 220/2))
                 .rotate(true)
                 .addImageFilter(new SimpleGaussianFilter())
                 .build();

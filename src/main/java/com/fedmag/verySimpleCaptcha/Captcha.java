@@ -4,6 +4,7 @@ import com.fedmag.verySimpleCaptcha.generators.ImageGenerator;
 import com.fedmag.verySimpleCaptcha.generators.RandomStringGenerator;
 import com.fedmag.verySimpleCaptcha.generators.filters.ImageFilter;
 
+import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -25,8 +26,14 @@ public class Captcha {
         this.trueValue = builder.charsToUse == null ? RandomStringGenerator.generate(builder.numbOfChars) : RandomStringGenerator.generate(builder.numbOfChars, builder.charsToUse);
 
         if(builder.rotateString) {
-            double randomRotation = Math.random() * 100 - 50;
+            double randomRotation = Math.random();
+            if (randomRotation < 0.5d) randomRotation *= -1;
+            randomRotation = randomRotation * 30;
+            System.out.println("Random rotation:  " + randomRotation);
             ImageGenerator.addFontTransformation(AffineTransform.getRotateInstance(Math.toRadians(randomRotation)));
+        }
+        if (builder.statrtingPoint != null) {
+            ImageGenerator.setStartingPoint(builder.statrtingPoint);
         }
         for (ImageFilter filter : builder.filters) {
             ImageGenerator.addImageFilter(filter);
@@ -42,6 +49,7 @@ public class Captcha {
         private String charsToUse;
         private final ArrayList<ImageFilter> filters = new ArrayList<>();
         private boolean rotateString = false;
+        private Point statrtingPoint;
 
         public Captcha build() {
             assert !charsToUse.isBlank();
@@ -84,6 +92,11 @@ public class Captcha {
 
         public Builder rotate(boolean rotate) {
             this.rotateString = rotate;
+            return this;
+        }
+
+        public Builder startingPoint(Point point) {
+            this.statrtingPoint = point;
             return this;
         }
     }
