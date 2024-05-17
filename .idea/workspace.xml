@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df2754be-e1ca-48fe-af58-27ff53d28cc3" name="Changes" comment="moves files">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/filters/DistorsionFilter.java" afterDir="false" />
+    <list default="true" id="df2754be-e1ca-48fe-af58-27ff53d28cc3" name="Changes" comment="adds string rotation and mechanisms to chain and apply many transformations to both the font and the image.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/Captcha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/Captcha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/ImageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/ImageGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/filters/ImageFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/filters/ImageFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/filters/SimpleGaussianFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/filters/SimpleGaussianFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715897010964</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="adds string rotation and mechanisms to chain and apply many transformations to both the font and the image.">
+      <option name="closed" value="true" />
+      <created>1715936130443</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715936130443</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,19 +189,15 @@
     <MESSAGE value="first commit, MVP done." />
     <MESSAGE value="moves files, improves blurring" />
     <MESSAGE value="moves files" />
-    <option name="LAST_COMMIT_MESSAGE" value="moves files" />
+    <MESSAGE value="adds string rotation and mechanisms to chain and apply many transformations to both the font and the image." />
+    <option name="LAST_COMMIT_MESSAGE" value="adds string rotation and mechanisms to chain and apply many transformations to both the font and the image." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/filters/DistorsionFilter.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/Captcha.java</url>
-          <line>29</line>
+          <line>28</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>

@@ -11,18 +11,18 @@ public class ImageGenerator {
 
     private static Font font = new Font("Verdana", Font.BOLD, 28);
     private static final ArrayList<ImageFilter> filters = new ArrayList<>();
-    private static final ArrayList<AffineTransform> stringTransformations = new ArrayList<>();
+    private static final ArrayList<AffineTransform> listOfStringTransformations = new ArrayList<>();
 
     public static void addFontTransformation(AffineTransform transform) {
-        stringTransformations.add(transform);
+        listOfStringTransformations.add(transform);
     }
 
     public static void removeFontTransformation(AffineTransform transform) {
-        stringTransformations.remove(transform);
+        listOfStringTransformations.remove(transform);
     }
 
     public static void removeAllFontTransformations() {
-        stringTransformations.clear();
+        listOfStringTransformations.clear();
     }
 
     public static void setFont(Font font) {
@@ -53,11 +53,13 @@ public class ImageGenerator {
     }
 
     private static void applyStringTransformations(Graphics2D g2, String string) {
-        if (stringTransformations.isEmpty()) {
+        if (listOfStringTransformations.isEmpty()) {
+            // if the list is empty we just want to draw the string as it is
             g2.drawString(string, 20, 100);
         } else {
+            // else apply all the transformations
             Font derived = Font.getFont(font.getAttributes());
-            for (AffineTransform transform : stringTransformations) {
+            for (AffineTransform transform : listOfStringTransformations) {
                 derived = derived.deriveFont(transform);
             }
             g2.setFont(derived);
