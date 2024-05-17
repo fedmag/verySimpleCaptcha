@@ -1,9 +1,8 @@
 package com.fedmag.verySimpleCaptcha;
 
-import com.fedmag.verySimpleCaptcha.generators.ImageGenerator;
+import com.fedmag.verySimpleCaptcha.generators.filters.SimpleGaussianFilter;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
@@ -12,9 +11,11 @@ import java.util.Base64;
 public class Main {
     public static void main(String[] args) {
         Captcha captcha = new Captcha.Builder()
-                .width(300)
-                .height(150)
+                .width(200)
+                .height(200)
                 .numberOfChars(5)
+                .rotate(true)
+                .addImageFilter(new SimpleGaussianFilter())
                 .build();
         System.out.println("Generated string: " + captcha.getToken());
         ByteArrayOutputStream baos = new ByteArrayOutputStream();

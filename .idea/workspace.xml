@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df2754be-e1ca-48fe-af58-27ff53d28cc3" name="Changes" comment="moves files">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/filters/GaussianFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/filters/ImageFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/filters/SimpleGaussianFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/filters/DistorsionFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/Captcha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/Captcha.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/ImageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/ImageGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/filters/ImageFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/filters/ImageFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/filters/SimpleGaussianFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/filters/SimpleGaussianFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,21 +30,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "fedmag"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;fedmag&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/fedmag/verySimpleCaptcha.git",
-    "accountId": "7e7c5623-c011-454f-8503-c3251ab13afe"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/fedmag/verySimpleCaptcha.git&quot;,
+    &quot;accountId&quot;: &quot;7e7c5623-c011-454f-8503-c3251ab13afe&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2gYeZWwqgUEfypj3EQv1IoT4TeU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -193,14 +193,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/Main.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/generators/filters/DistorsionFilter.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/Main.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="9" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/fedmag/verySimpleCaptcha/Captcha.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

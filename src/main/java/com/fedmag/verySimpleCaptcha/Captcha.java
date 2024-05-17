@@ -4,6 +4,7 @@ import com.fedmag.verySimpleCaptcha.generators.ImageGenerator;
 import com.fedmag.verySimpleCaptcha.generators.RandomStringGenerator;
 import com.fedmag.verySimpleCaptcha.generators.filters.ImageFilter;
 
+import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
@@ -22,6 +23,14 @@ public class Captcha {
 
     private Captcha(Builder builder) {
         this.trueValue = builder.charsToUse == null ? RandomStringGenerator.generate(builder.numbOfChars) : RandomStringGenerator.generate(builder.numbOfChars, builder.charsToUse);
+
+        if(builder.rotateString) {
+            double randomRotation = Math.random() * 100 - 50;
+            ImageGenerator.addFontTransformation(AffineTransform.getRotateInstance(Math.toRadians(randomRotation)));
+        }
+        for (ImageFilter filter : builder.filters) {
+            ImageGenerator.addImageFilter(filter);
+        }
         this.image = ImageGenerator.fromString(this.trueValue, builder.imageWidth, builder.imageHeight);
     }
 
@@ -31,11 +40,11 @@ public class Captcha {
         private int imageWidth = 200;
         private int imageHeight = 100;
         private String charsToUse;
-        ArrayList<Character> availableChars = new ArrayList<>();
-        ArrayList<ImageFilter> filters = new ArrayList<>();
+        private final ArrayList<ImageFilter> filters = new ArrayList<>();
+        private boolean rotateString = false;
 
         public Captcha build() {
-            assert !availableChars.isEmpty();
+            assert !charsToUse.isBlank();
             return new Captcha(this);
         }
 
@@ -68,8 +77,13 @@ public class Captcha {
             return this;
         }
 
-        public Builder addFilter(ImageFilter filter) {
+        public Builder addImageFilter(ImageFilter filter) {
             this.filters.add(filter);
+            return this;
+        }
+
+        public Builder rotate(boolean rotate) {
+            this.rotateString = rotate;
             return this;
         }
     }

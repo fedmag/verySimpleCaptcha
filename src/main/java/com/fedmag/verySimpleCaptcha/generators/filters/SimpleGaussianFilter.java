@@ -24,6 +24,6 @@ public class SimpleGaussianFilter implements ImageFilter{
 
         Arrays.fill(matrix, 1.0f / (float) numberOfCells);
         BufferedImageOp op = new ConvolveOp( new Kernel(matrixSize, matrixSize, matrix), ConvolveOp.EDGE_NO_OP, null );
-        return op.filter(input, new BufferedImage(input.getWidth(), input.getHeight(), input.getType()));
+        return op.filter(input, null);
     }
 }
