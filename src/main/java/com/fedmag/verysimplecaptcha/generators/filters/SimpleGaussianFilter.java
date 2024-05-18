@@ -6,7 +6,7 @@ import java.awt.image.ConvolveOp;
 import java.awt.image.Kernel;
 import java.util.Arrays;
 
-public class SimpleGaussianFilter implements ImageFilter{
+public class SimpleGaussianFilter implements ImageFilter {
 
     private int matrixSize = 7;
 
@@ -23,7 +23,7 @@ public class SimpleGaussianFilter implements ImageFilter{
         float[] matrix = new float[numberOfCells];
 
         Arrays.fill(matrix, 1.0f / (float) numberOfCells);
-        BufferedImageOp op = new ConvolveOp( new Kernel(matrixSize, matrixSize, matrix), ConvolveOp.EDGE_NO_OP, null );
+        BufferedImageOp op = new ConvolveOp(new Kernel(matrixSize, matrixSize, matrix), ConvolveOp.EDGE_NO_OP, null);
         return op.filter(input, null);
     }
 }
