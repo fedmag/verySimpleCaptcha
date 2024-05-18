@@ -1,6 +1,6 @@
-package com.fedmag.verySimpleCaptcha.generators;
+package com.fedmag.verysimplecaptcha.generators;
 
-import com.fedmag.verySimpleCaptcha.generators.filters.ImageFilter;
+import com.fedmag.verysimplecaptcha.generators.filters.ImageFilter;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 public class ImageGenerator {
 
+    // defaults
     private static Font font = new Font("Verdana", Font.BOLD, 28);
     private static final ArrayList<ImageFilter> filters = new ArrayList<>();
     private static final ArrayList<AffineTransform> listOfStringTransformations = new ArrayList<>();
@@ -53,6 +54,7 @@ public class ImageGenerator {
 
         applyStringTransformations(g2, string);
         bufferedImage = applyImageFilters(bufferedImage);
+        removeAllImageFilters(); // FIXME if this is not there every call to captcha adds a filter XD
         g2.dispose();
         return bufferedImage;
     }

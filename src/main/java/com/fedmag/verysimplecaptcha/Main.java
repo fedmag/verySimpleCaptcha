@@ -1,6 +1,6 @@
-package com.fedmag.verySimpleCaptcha;
+package com.fedmag.verysimplecaptcha;
 
-import com.fedmag.verySimpleCaptcha.generators.filters.SimpleGaussianFilter;
+import com.fedmag.verysimplecaptcha.generators.filters.SimpleGaussianFilter;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

@@ -1,8 +1,8 @@
-package com.fedmag.verySimpleCaptcha;
+package com.fedmag.verysimplecaptcha;
 
-import com.fedmag.verySimpleCaptcha.generators.ImageGenerator;
-import com.fedmag.verySimpleCaptcha.generators.RandomStringGenerator;
-import com.fedmag.verySimpleCaptcha.generators.filters.ImageFilter;
+import com.fedmag.verysimplecaptcha.generators.ImageGenerator;
+import com.fedmag.verysimplecaptcha.generators.RandomStringGenerator;
+import com.fedmag.verysimplecaptcha.generators.filters.ImageFilter;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;

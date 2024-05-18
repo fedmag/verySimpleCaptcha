@@ -1,4 +1,4 @@
-package com.fedmag.verySimpleCaptcha.generators.filters;
+package com.fedmag.verysimplecaptcha.generators.filters;
 
 import java.awt.image.BufferedImage;
 import java.awt.image.BufferedImageOp;
