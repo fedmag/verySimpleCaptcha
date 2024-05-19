@@ -4,6 +4,6 @@ import java.awt.image.BufferedImage;
 
 public interface ImageFilter {
 
-    BufferedImage apply(BufferedImage input);
+  BufferedImage apply(BufferedImage input);
 
 }

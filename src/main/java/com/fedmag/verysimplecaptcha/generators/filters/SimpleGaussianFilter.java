@@ -8,22 +8,23 @@ import java.util.Arrays;
 
 public class SimpleGaussianFilter implements ImageFilter {
 
-    private int matrixSize = 7;
+  private int matrixSize = 7;
 
-    public SimpleGaussianFilter(int matrixSize) {
-        this.matrixSize = matrixSize;
-    }
+  public SimpleGaussianFilter(int matrixSize) {
+    this.matrixSize = matrixSize;
+  }
 
-    public SimpleGaussianFilter() {
-    }
+  public SimpleGaussianFilter() {
+  }
 
-    @Override
-    public BufferedImage apply(BufferedImage input) {
-        int numberOfCells = matrixSize * matrixSize;
-        float[] matrix = new float[numberOfCells];
+  @Override
+  public BufferedImage apply(BufferedImage input) {
+    int numberOfCells = matrixSize * matrixSize;
+    float[] matrix = new float[numberOfCells];
 
-        Arrays.fill(matrix, 1.0f / (float) numberOfCells);
-        BufferedImageOp op = new ConvolveOp(new Kernel(matrixSize, matrixSize, matrix), ConvolveOp.EDGE_NO_OP, null);
-        return op.filter(input, null);
-    }
+    Arrays.fill(matrix, 1.0f / (float) numberOfCells);
+    BufferedImageOp op = new ConvolveOp(new Kernel(matrixSize, matrixSize, matrix),
+        ConvolveOp.EDGE_NO_OP, null);
+    return op.filter(input, null);
+  }
 }

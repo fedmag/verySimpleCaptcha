@@ -9,13 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df2754be-e1ca-48fe-af58-27ff53d28cc3" name="Changes" comment="renames package, adds info for jar">
+    <list default="true" id="df2754be-e1ca-48fe-af58-27ff53d28cc3" name="Changes" comment="adds new method to get the image as encoded string, cleans code to reflect the change and fixes packages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/Captcha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/Captcha.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/ImageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/ImageGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/RandomStringGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/RandomStringGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/filters/ImageFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/filters/ImageFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/filters/SimpleGaussianFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/filters/SimpleGaussianFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/com/fedmag/verySimpleCaptcha/ImageGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/fedmag/verysimplecaptcha/ImageGeneratorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +31,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,6 +50,9 @@
     &quot;accountId&quot;: &quot;7e7c5623-c011-454f-8503-c3251ab13afe&quot;
   }
 }</component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -57,37 +64,42 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.fedmag.verySimpleCaptcha.Main.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ImageGeneratorTest (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ImageGeneratorTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ImageGeneratorTest.successTest.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.verySimpleCaptcha [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.verySimpleCaptcha [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.verySimpleCaptcha [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.verySimpleCaptcha [site].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.verySimpleCaptcha [verify].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.verysimplecaptcha [clean].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/maggi/Desktop/fedmag/verySimpleCaptcha/src/main/java/com/fedmag/verysimplecaptcha&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/maggi/Desktop/fedmag/verySimpleCaptcha/src/main/java/com/fedmag/verysimplecaptcha&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3739931&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.com.fedmag.verySimpleCaptcha.Main.executor": "Run",
+    "JUnit.ImageGeneratorTest (1).executor": "Run",
+    "JUnit.ImageGeneratorTest.executor": "Run",
+    "JUnit.ImageGeneratorTest.successTest.executor": "Run",
+    "Maven.verySimpleCaptcha [clean].executor": "Run",
+    "Maven.verySimpleCaptcha [install].executor": "Run",
+    "Maven.verySimpleCaptcha [package].executor": "Run",
+    "Maven.verySimpleCaptcha [site].executor": "Run",
+    "Maven.verySimpleCaptcha [verify].executor": "Run",
+    "Maven.verysimplecaptcha [clean].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/maggi/Desktop/fedmag/verySimpleCaptcha/src/main/java/com/fedmag/verysimplecaptcha",
+    "last_opened_file_path": "C:/Users/maggi/Desktop/fedmag/verySimpleCaptcha/src/test/java",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3739931",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\maggi\Desktop\fedmag\verySimpleCaptcha\src\test\java" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.fedmag.verysimplecaptcha" />
       <recent name="com.fedmag" />
     </key>
   </component>
@@ -229,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715990998842</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="adds new method to get the image as encoded string, cleans code to reflect the change and fixes packages">
+      <option name="closed" value="true" />
+      <created>1716039206575</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716039206575</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -251,14 +271,15 @@
     <MESSAGE value="adds comments" />
     <MESSAGE value="adds modifies range for rotation, adds startingPoint option, reduces" />
     <MESSAGE value="renames package, adds info for jar" />
-    <option name="LAST_COMMIT_MESSAGE" value="renames package, adds info for jar" />
+    <MESSAGE value="adds new method to get the image as encoded string, cleans code to reflect the change and fixes packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="adds new method to get the image as encoded string, cleans code to reflect the change and fixes packages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/Captcha.java</url>
-          <line>30</line>
+          <line>29</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
