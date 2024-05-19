@@ -1,18 +1,19 @@
 package com.fedmag.verysimplecaptcha.generators;
 
 import com.fedmag.verysimplecaptcha.generators.filters.ImageFilter;
-
-import java.awt.*;
+import java.awt.Font;
+import java.awt.Graphics2D;
+import java.awt.Point;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 public class ImageGenerator {
 
-  // defaults
-  private static Font font = new Font("Verdana", Font.BOLD, 28);
   private static final ArrayList<ImageFilter> filters = new ArrayList<>();
   private static final ArrayList<AffineTransform> listOfStringTransformations = new ArrayList<>();
+  // defaults
+  private static Font font = new Font("Verdana", Font.BOLD, 28);
   private static Point startingPoint = new Point(10, 100);
 
   public static void setStartingPoint(Point point) {

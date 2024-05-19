@@ -9,14 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df2754be-e1ca-48fe-af58-27ff53d28cc3" name="Changes" comment="adds new method to get the image as encoded string, cleans code to reflect the change and fixes packages">
+    <list default="true" id="df2754be-e1ca-48fe-af58-27ff53d28cc3" name="Changes" comment="code formatting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/Captcha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/Captcha.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/ImageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/ImageGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/RandomStringGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/RandomStringGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/filters/ImageFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/filters/ImageFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/filters/SimpleGaussianFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/filters/SimpleGaussianFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716039206575</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="code formatting">
+      <option name="closed" value="true" />
+      <created>1716108726323</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1716108726323</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -272,14 +277,15 @@
     <MESSAGE value="adds modifies range for rotation, adds startingPoint option, reduces" />
     <MESSAGE value="renames package, adds info for jar" />
     <MESSAGE value="adds new method to get the image as encoded string, cleans code to reflect the change and fixes packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="adds new method to get the image as encoded string, cleans code to reflect the change and fixes packages" />
+    <MESSAGE value="code formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="code formatting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/Captcha.java</url>
-          <line>29</line>
+          <line>52</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

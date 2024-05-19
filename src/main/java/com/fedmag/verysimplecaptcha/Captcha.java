@@ -3,34 +3,19 @@ package com.fedmag.verysimplecaptcha;
 import com.fedmag.verysimplecaptcha.generators.ImageGenerator;
 import com.fedmag.verysimplecaptcha.generators.RandomStringGenerator;
 import com.fedmag.verysimplecaptcha.generators.filters.ImageFilter;
-
-import javax.imageio.ImageIO;
-import java.awt.*;
+import java.awt.Point;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Base64;
+import javax.imageio.ImageIO;
 
 public class Captcha {
 
   private final String trueValue;
   private final BufferedImage image;
-
-  public String getToken() {
-    return trueValue;
-  }
-
-  public BufferedImage getImage() {
-    return image;
-  }
-
-  public String getImageAsBase64EncododedString() throws IOException {
-    ByteArrayOutputStream baos = new ByteArrayOutputStream();
-    ImageIO.write(this.getImage(), "jpeg", baos);
-    return Base64.getEncoder().encodeToString(baos.toByteArray());
-  }
 
   private Captcha(Builder builder) {
     this.trueValue =
@@ -56,13 +41,27 @@ public class Captcha {
     this.image = ImageGenerator.fromString(this.trueValue, builder.imageWidth, builder.imageHeight);
   }
 
+  public String getToken() {
+    return trueValue;
+  }
+
+  public BufferedImage getImage() {
+    return image;
+  }
+
+  public String getImageAsBase64EncododedString() throws IOException {
+    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    ImageIO.write(this.getImage(), "jpeg", baos);
+    return Base64.getEncoder().encodeToString(baos.toByteArray());
+  }
+
   public static class Builder {
 
+    private final ArrayList<ImageFilter> filters = new ArrayList<>();
     private int numbOfChars = 5;
     private int imageWidth = 200;
     private int imageHeight = 100;
     private String charsToUse;
-    private final ArrayList<ImageFilter> filters = new ArrayList<>();
     private boolean rotateString = false;
     private Point statrtingPoint;
 

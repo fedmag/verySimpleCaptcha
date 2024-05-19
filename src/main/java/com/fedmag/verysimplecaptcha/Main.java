@@ -1,11 +1,10 @@
 package com.fedmag.verysimplecaptcha;
 
 import com.fedmag.verysimplecaptcha.generators.filters.SimpleGaussianFilter;
-
-import javax.imageio.ImageIO;
-import java.awt.*;
+import java.awt.Point;
 import java.io.File;
 import java.io.IOException;
+import javax.imageio.ImageIO;
 
 public class Main {
 
