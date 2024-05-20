@@ -85,7 +85,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.3739931",
     "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
+    "settings.editor.selected.configurable": "preferences.sourceCode"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -254,7 +254,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716108726323</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="code formatting">
+      <option name="closed" value="true" />
+      <created>1716108814420</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1716108814420</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -285,7 +293,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/Captcha.java</url>
-          <line>52</line>
+          <line>59</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

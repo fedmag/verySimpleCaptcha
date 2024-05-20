@@ -3,6 +3,7 @@ package com.fedmag.verysimplecaptcha;
 import com.fedmag.verysimplecaptcha.generators.ImageGenerator;
 import com.fedmag.verysimplecaptcha.generators.RandomStringGenerator;
 import com.fedmag.verysimplecaptcha.generators.filters.ImageFilter;
+import java.awt.Color;
 import java.awt.Point;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
@@ -23,22 +24,32 @@ public class Captcha {
             : RandomStringGenerator.generate(builder.numbOfChars, builder.charsToUse);
 
     if (builder.rotateString) {
-      double randomRotation = Math.random();
-      if (randomRotation < 0.5d) {
-        randomRotation *= -1;
-      }
-      randomRotation = randomRotation * 30;
-      System.out.println("Random rotation:  " + randomRotation);
-      ImageGenerator.addFontTransformation(
-          AffineTransform.getRotateInstance(Math.toRadians(randomRotation)));
+      generateRotation();
     }
     if (builder.statrtingPoint != null) {
       ImageGenerator.setStartingPoint(builder.statrtingPoint);
     }
+    if (builder.backgroundColor != null) {
+      ImageGenerator.setBackgroundColor(builder.backgroundColor);
+    }
+    if (builder.fontColor != null) {
+      ImageGenerator.setFontColor(builder.fontColor);
+    }
+
     for (ImageFilter filter : builder.filters) {
       ImageGenerator.addImageFilter(filter);
     }
     this.image = ImageGenerator.fromString(this.trueValue, builder.imageWidth, builder.imageHeight);
+  }
+
+  private void generateRotation() {
+    double randomRotation = Math.random();
+    if (randomRotation < 0.5d) {
+      randomRotation *= -1;
+    }
+    randomRotation = randomRotation * 30;
+    ImageGenerator.addFontTransformation(
+        AffineTransform.getRotateInstance(Math.toRadians(randomRotation)));
   }
 
   public String getToken() {
@@ -64,6 +75,8 @@ public class Captcha {
     private String charsToUse;
     private boolean rotateString = false;
     private Point statrtingPoint;
+    private Color backgroundColor;
+    private Color fontColor;
 
     public Captcha build() {
       assert !charsToUse.isBlank();
@@ -93,7 +106,6 @@ public class Captcha {
       return this;
     }
 
-
     public Builder excludeLetters() {
       charsToUse = "0123456789";
       return this;
@@ -111,6 +123,16 @@ public class Captcha {
 
     public Builder startingPoint(Point point) {
       this.statrtingPoint = point;
+      return this;
+    }
+
+    public Builder backgroundColor(Color color) {
+      this.backgroundColor = color;
+      return this;
+    }
+
+    public Builder fontColor(Color color) {
+      this.fontColor = color;
       return this;
     }
   }

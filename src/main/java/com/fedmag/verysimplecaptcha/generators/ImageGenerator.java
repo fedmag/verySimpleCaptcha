@@ -1,6 +1,7 @@
 package com.fedmag.verysimplecaptcha.generators;
 
 import com.fedmag.verysimplecaptcha.generators.filters.ImageFilter;
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.Point;
@@ -15,6 +16,8 @@ public class ImageGenerator {
   // defaults
   private static Font font = new Font("Verdana", Font.BOLD, 28);
   private static Point startingPoint = new Point(10, 100);
+  private static Color backgroundColor = new Color(29, 28, 26);
+  private static Color fontColor = new Color(236, 239, 244);
 
   public static void setStartingPoint(Point point) {
     startingPoint = point;
@@ -48,16 +51,32 @@ public class ImageGenerator {
     filters.clear();
   }
 
+  public static void setBackgroundColor(Color color) {
+    backgroundColor = color;
+  }
+
+  public static void setFontColor(Color color) {
+    fontColor = color;
+  }
+
   public static BufferedImage fromString(String string, int width, int height) {
     BufferedImage bufferedImage = new BufferedImage(width, height, 1);
-    Graphics2D g2 = bufferedImage.createGraphics();
-    g2.setFont(ImageGenerator.font);
+    Graphics2D g2 = prepareGraphics(bufferedImage.createGraphics(), width, height);
 
+    // write on the image and apply filters
     applyStringTransformations(g2, string);
     bufferedImage = applyImageFilters(bufferedImage);
-    removeAllImageFilters(); // FIXME if this is not there every call to captcha adds a filter XD
+    removeAllImageFilters();
     g2.dispose();
     return bufferedImage;
+  }
+
+  private static Graphics2D prepareGraphics(Graphics2D g2, int width, int height) {
+    g2.setColor(backgroundColor);
+    g2.fillRect(0, 0, width, height);
+    g2.setColor(fontColor);
+    g2.setFont(ImageGenerator.font);
+    return g2;
   }
 
   private static void applyStringTransformations(Graphics2D g2, String string) {
