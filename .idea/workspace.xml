@@ -9,14 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df2754be-e1ca-48fe-af58-27ff53d28cc3" name="Changes" comment="adds options to set color for bg and font, creates new function to clean Captcha class">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/fedmag/verysimplecaptcha/generators/RandomStringGeneratorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/ImageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/ImageGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/RandomStringGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/RandomStringGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fedmag/verysimplecaptcha/ImageGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fedmag/verysimplecaptcha/generators/ImageGeneratorTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="df2754be-e1ca-48fe-af58-27ff53d28cc3" name="Changes" comment="adds tests for generators" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +63,10 @@
     "JUnit.ImageGeneratorTest (1).executor": "Run",
     "JUnit.ImageGeneratorTest.executor": "Run",
     "JUnit.ImageGeneratorTest.successTest.executor": "Run",
+    "JUnit.ImageGeneratorTest.testAddFontTransformation.executor": "Run",
+    "JUnit.ImageGeneratorTest.testAddImageFilter.executor": "Run",
     "JUnit.ImageGeneratorTest.testFromString.executor": "Run",
+    "JUnit.ImageGeneratorTest.testRemoveAllFontTransformations.executor": "Run",
     "JUnit.ImageGeneratorTest.testSetSize.executor": "Run",
     "JUnit.ImageGeneratorTest.testSetStartingPoint.executor": "Run",
     "JUnit.RandomStringGeneratorTest.executor": "Run",
@@ -323,7 +319,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716198456080</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="adds tests for generators">
+      <option name="closed" value="true" />
+      <created>1716366994192</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1716366994192</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -348,7 +352,8 @@
     <MESSAGE value="adds new method to get the image as encoded string, cleans code to reflect the change and fixes packages" />
     <MESSAGE value="code formatting" />
     <MESSAGE value="adds options to set color for bg and font, creates new function to clean Captcha class" />
-    <option name="LAST_COMMIT_MESSAGE" value="adds options to set color for bg and font, creates new function to clean Captcha class" />
+    <MESSAGE value="adds tests for generators" />
+    <option name="LAST_COMMIT_MESSAGE" value="adds tests for generators" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
