@@ -9,7 +9,7 @@ import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
-public class ImageGenerator {
+public final class ImageGenerator {
 
   private static final ArrayList<ImageFilter> filters = new ArrayList<>();
   private static final ArrayList<AffineTransform> listOfStringTransformations = new ArrayList<>();
@@ -18,6 +18,9 @@ public class ImageGenerator {
   private static Point startingPoint = new Point(10, 100);
   private static Color backgroundColor = new Color(29, 28, 26);
   private static Color fontColor = new Color(236, 239, 244);
+
+  private ImageGenerator() {
+  }
 
   public static void setStartingPoint(Point point) {
     startingPoint = point;

@@ -9,11 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df2754be-e1ca-48fe-af58-27ff53d28cc3" name="Changes" comment="code formatting">
+    <list default="true" id="df2754be-e1ca-48fe-af58-27ff53d28cc3" name="Changes" comment="adds options to set color for bg and font, creates new function to clean Captcha class">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/fedmag/verysimplecaptcha/generators/RandomStringGeneratorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/Captcha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/Captcha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/ImageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/ImageGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/RandomStringGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/generators/RandomStringGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fedmag/verysimplecaptcha/ImageGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fedmag/verysimplecaptcha/generators/ImageGeneratorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +25,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -68,6 +70,14 @@
     "JUnit.ImageGeneratorTest (1).executor": "Run",
     "JUnit.ImageGeneratorTest.executor": "Run",
     "JUnit.ImageGeneratorTest.successTest.executor": "Run",
+    "JUnit.ImageGeneratorTest.testFromString.executor": "Run",
+    "JUnit.ImageGeneratorTest.testSetSize.executor": "Run",
+    "JUnit.ImageGeneratorTest.testSetStartingPoint.executor": "Run",
+    "JUnit.RandomStringGeneratorTest.executor": "Run",
+    "JUnit.RandomStringGeneratorTest.generate.executor": "Run",
+    "JUnit.RandomStringGeneratorTest.generateOnlyNumbers.executor": "Run",
+    "JUnit.RandomStringGeneratorTest.generateValid.executor": "Run",
+    "JUnit.RandomStringGeneratorTest.generateValidVariableLength.executor": "Run",
     "Maven.verySimpleCaptcha [clean].executor": "Run",
     "Maven.verySimpleCaptcha [install].executor": "Run",
     "Maven.verySimpleCaptcha [package].executor": "Run",
@@ -79,13 +89,13 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/maggi/Desktop/fedmag/verySimpleCaptcha/src/main/java/com/fedmag/verysimplecaptcha",
+    "last_directory_selection": "C:/Users/maggi/Desktop/fedmag/verySimpleCaptcha/src/test/java/com/fedmag/verysimplecaptcha",
     "last_opened_file_path": "C:/Users/maggi/Desktop/fedmag/verySimpleCaptcha/src/test/java",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.3739931",
     "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "preferences.sourceCode"
+    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -95,35 +105,26 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.fedmag.verysimplecaptcha.generators" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.fedmag.verysimplecaptcha.generators" />
       <recent name="com.fedmag.verysimplecaptcha" />
       <recent name="com.fedmag" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.fedmag.verysimplecaptcha.Main" />
-      <module name="verysimplecaptcha" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.fedmag.generators.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ImageGeneratorTest.testAddImageFilter">
     <configuration name="ImageGeneratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="verysimplecaptcha" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.fedmag.generators.*" />
+          <option name="PATTERN" value="com.fedmag.verysimplecaptcha.generators.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.fedmag" />
-      <option name="MAIN_CLASS_NAME" value="com.fedmag.ImageGeneratorTest" />
+      <option name="PACKAGE_NAME" value="com.fedmag.verysimplecaptcha.generators" />
+      <option name="MAIN_CLASS_NAME" value="com.fedmag.verysimplecaptcha.generators.ImageGeneratorTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -144,32 +145,84 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ImageGeneratorTest.successTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ImageGeneratorTest.testAddFontTransformation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="verysimplecaptcha" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.fedmag.generators.*" />
+          <option name="PATTERN" value="com.fedmag.verysimplecaptcha.generators.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.fedmag" />
-      <option name="MAIN_CLASS_NAME" value="com.fedmag.ImageGeneratorTest" />
-      <option name="METHOD_NAME" value="successTest" />
+      <option name="PACKAGE_NAME" value="com.fedmag.verysimplecaptcha.generators" />
+      <option name="MAIN_CLASS_NAME" value="com.fedmag.verysimplecaptcha.generators.ImageGeneratorTest" />
+      <option name="METHOD_NAME" value="testAddFontTransformation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ImageGeneratorTest.testAddImageFilter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="verysimplecaptcha" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fedmag.verysimplecaptcha.generators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.fedmag.verysimplecaptcha.generators" />
+      <option name="MAIN_CLASS_NAME" value="com.fedmag.verysimplecaptcha.generators.ImageGeneratorTest" />
+      <option name="METHOD_NAME" value="testAddImageFilter" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ImageGeneratorTest.testRemoveAllFontTransformations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="verysimplecaptcha" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fedmag.verysimplecaptcha.generators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.fedmag.verysimplecaptcha.generators" />
+      <option name="MAIN_CLASS_NAME" value="com.fedmag.verysimplecaptcha.generators.ImageGeneratorTest" />
+      <option name="METHOD_NAME" value="testRemoveAllFontTransformations" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ImageGeneratorTest.testSetSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="verysimplecaptcha" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fedmag.verysimplecaptcha.generators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.fedmag.verysimplecaptcha.generators" />
+      <option name="MAIN_CLASS_NAME" value="com.fedmag.verysimplecaptcha.generators.ImageGeneratorTest" />
+      <option name="METHOD_NAME" value="testSetSize" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.ImageGeneratorTest.testAddFontTransformation" />
+      <item itemvalue="JUnit.ImageGeneratorTest.testAddImageFilter" />
+      <item itemvalue="JUnit.ImageGeneratorTest.testRemoveAllFontTransformations" />
+      <item itemvalue="JUnit.ImageGeneratorTest.testSetSize" />
       <item itemvalue="JUnit.ImageGeneratorTest" />
-      <item itemvalue="JUnit.ImageGeneratorTest.successTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.ImageGeneratorTest.successTest" />
+        <item itemvalue="JUnit.ImageGeneratorTest.testAddImageFilter" />
         <item itemvalue="JUnit.ImageGeneratorTest" />
+        <item itemvalue="JUnit.ImageGeneratorTest.testRemoveAllFontTransformations" />
+        <item itemvalue="JUnit.ImageGeneratorTest.testAddFontTransformation" />
+        <item itemvalue="JUnit.ImageGeneratorTest.testSetSize" />
       </list>
     </recent_temporary>
   </component>
@@ -262,7 +315,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716108814420</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="adds options to set color for bg and font, creates new function to clean Captcha class">
+      <option name="closed" value="true" />
+      <created>1716198456080</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1716198456080</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -286,14 +347,18 @@
     <MESSAGE value="renames package, adds info for jar" />
     <MESSAGE value="adds new method to get the image as encoded string, cleans code to reflect the change and fixes packages" />
     <MESSAGE value="code formatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="code formatting" />
+    <MESSAGE value="adds options to set color for bg and font, creates new function to clean Captcha class" />
+    <option name="LAST_COMMIT_MESSAGE" value="adds options to set color for bg and font, creates new function to clean Captcha class" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/fedmag/verysimplecaptcha/Captcha.java</url>
-          <line>59</line>
+          <line>63</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

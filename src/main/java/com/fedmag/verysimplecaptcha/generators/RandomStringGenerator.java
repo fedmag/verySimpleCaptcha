@@ -2,9 +2,12 @@ package com.fedmag.verysimplecaptcha.generators;
 
 import java.util.Random;
 
-public class RandomStringGenerator {
+public final class RandomStringGenerator {
 
-  private final static String alphanumericCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuv";
+  private final static String alphanumericCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvz";
+
+  private RandomStringGenerator() {
+  }
 
   public static String generate(int length) {
     if (length < 1) {
