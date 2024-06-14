@@ -86,15 +86,15 @@ public final class ImageGenerator {
     if (listOfStringTransformations.isEmpty()) {
       // if the list is empty we just want to draw the string as it is
       g2.drawString(string, startingPoint.x, startingPoint.y);
-    } else {
-      // else apply all the transformations
-      Font derived = Font.getFont(font.getAttributes());
-      for (AffineTransform transform : listOfStringTransformations) {
-        derived = derived.deriveFont(transform);
-      }
-      g2.setFont(derived);
-      g2.drawString(string, startingPoint.x, startingPoint.y);
+      return;
     }
+    // else apply all the transformations
+    Font derived = Font.getFont(font.getAttributes());
+    for (AffineTransform transform : listOfStringTransformations) {
+      derived = derived.deriveFont(transform);
+    }
+    g2.setFont(derived);
+    g2.drawString(string, startingPoint.x, startingPoint.y);
   }
 
   private static BufferedImage applyImageFilters(BufferedImage bufferedImage) {
